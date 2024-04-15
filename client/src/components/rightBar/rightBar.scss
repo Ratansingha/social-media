@@ -1,0 +1,92 @@
+
+@import "../../style.scss";
+
+.rightBar{
+    flex:3;
+    position:sticky;
+    top:70px;
+    height:calc(100vh - 70px);
+    overflow:scroll;
+    &::-webkit-scrollbar{
+        display:none;
+      
+    }
+      @include mobile{
+            display:none;
+        }
+        @include tablet{
+            display:none;
+        }
+    .container{
+        padding:20px;
+        .item{ 
+            padding:10px;
+ -webkit-box-shadow: 2px 7px 17px -7px rgba(0,0,0,0.35);
+ -moz-box-shadow: 2px 7px 17px -7px rgba(0,0,0,0.35);
+  box-shadow: 2px 7px 17px -7px rgba(0,0,0,0.35);
+  margin-bottom:20px;
+            span{
+                color:gray;
+            }
+            .user{
+                display:flex;
+                align-items:center;
+                justify-content:space-between;
+                margin:10px 0px;
+                .userInfo{
+                    display:flex;
+                    align-items:center;
+                    gap:10px;
+                    position:relative;
+                    img{
+                        width:30px;
+                        height:30px;
+                        border-radius:50%;
+                        object-fit: cover;
+                    }
+                    .online{
+                        width:12px;
+                        height:12px;
+                        border-radius:50%;
+                        background-color: limegreen;
+                        position:absolute;
+                        top:0;
+                        right:65px;
+                    }
+                    p{
+                        color:rgba(143, 47, 122, 0.918);
+                        font-style:italic;
+                     
+                    }
+                    span{
+                        font-weight: 500;
+                        color: #000;
+                        font-style:normal
+                    }
+                }
+                .buttons{
+                    display:flex;
+                    align-items:center;
+                    flex-direction:space-between;
+                    gap:10px;
+
+                    button{
+                      border:none;
+                      padding:5px;
+                      color:white;
+                      cursor:pointer;
+                      border-radius:4px;
+                      
+                      &:first-child{
+                        background-color: blue;
+                      }
+                      &:last-child{
+                        background-color: rgb(168, 42, 206);
+                      }
+                    }
+                }
+            }
+            
+        }
+    }
+}
